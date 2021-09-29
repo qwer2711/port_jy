@@ -1,19 +1,14 @@
-
 body {background: url(../img/header_bg.jpg) repeat-x center top; z-index: -2;}
 /* #header{background:url(../img/header_bg.jpg); z-index: -2;} */
+
+/* #레이아웃 */
 #nav { background-color: #f6fdff;}
 #title{background-color: #eaf7fd;}
-
 #contents .container{
     border-right: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
 }
-
-#cont_left {
-    float: left;  
-    width: 250px; 
-}
-
+#cont_left {float: left;   width: 250px; }
 #cont_center {
     overflow:hidden; 
     margin-right: 250px; 
@@ -21,24 +16,25 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; z-index: -2;}
     border-right: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
 }
-
 #cont_right {
     position: absolute; 
     top:0; right: 0; 
     width: 250px; 
 }
-
 #footer {border-top:1px solid #dbdbdb;}
 
 /* 컨테이너 */
 .container {position:relative; width: 1200px; margin: 0 auto;}
 
-/* 헤더 */
+/* ------------------ 1. #header ---------------------- */
+
+/* div.header */
 .header {height: 327px;}
 .header_menu{text-align: right; font-family: 'Abel' , sans-serif; padding: 0 10px;}
 .header_menu a{color: #fff; padding: 8px 0 6px 10px; display: inline-block; transition: color 0.3s ease;}
 .header_menu a:hover {color: #ccc;}
 
+/* div.header_제목박스 효과 */
 .header_tit {text-align: center; text-transform: uppercase; margin-top: 55px; font-family: 'Abel',sans-serif;}
 .header_tit h1 {padding: 5px 30px; background-color: #51b0dc; display: inline-block; font-size: 30px; color: #fff;transition: box-shadow 0.45s ease-in-out;}
 .header_tit h1:hover{box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;}
@@ -47,36 +43,58 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; z-index: -2;}
     ow 0.45s ease-in-out;}
 .header_tit a:hover{box-shadow: 0 0 0 5px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
+/* div.header_아이콘 */
 .header_icon {text-align: center; margin-top: 40px; padding-bottom: 45px; } 
 .header_icon ul li{display: inline-block;}
-.header_icon ul li a {position: relative; background-color: #3192bf; border-radius: 50%; width: 60px; height: 60px; color: #fff; 
-    display: inline-block; font-size: 35px; line-height: 60px; transition: all 0.3s ease;}
-
+.header_icon ul li a {
+    position: relative; 
+    background-color: #3192bf; 
+    border-radius: 50%; 
+    width: 60px; height: 60px; 
+    color: #fff; 
+    display: inline-block; 
+    font-size: 35px; line-height: 60px; 
+    transition: all 0.3s ease;
+}
+/* 호버시 boxshdow 효과 */
 .header_icon ul li a:hover {box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset , 0 0 0 100px rgba(0,0,0,0.1) inset;}
+
+/* 호버시 나타나는 메뉴이름 */
 .header_icon ul li a span {opacity:0; position: absolute; font-size: 12px; top: -33px; left:50%; transform: translateX(-50%); background-color: #3192bf;  border-radius:5px; padding: 0 10px; line-height: 1.6; transition: all 0.3s ease;}
+/* 말풍선박스 세모 만들기 */
+.header_icon ul li a span::before {content: '';  position:absolute; left: 50%; transform: translateX(-50%); bottom: -5px;
+    border-top: 5px solid  #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    /* border-bottom: 5px solid black; */
+    }
+
 .header_icon ul li a:hover span {opacity: 1; top:-28px;}
 
-.header_icon ul li a span::before {content: '';  position:absolute; left: 50%; transform: translateX(-50%); bottom: -5px;
-border-top: 5px solid  #3192bf;
-border-left: 5px solid transparent;
-border-right: 5px solid transparent;
-/* border-bottom: 5px solid black; */
-}
 
-/* 전체메뉴 */
-.nav {overflow: hidden; padding: 25px 15px; display: none;}
+/* ------------------ 2. #nav 전체메뉴 ---------------------- */
+
+.nav {padding: 25px 15px; display: none;}
+
 .nav > div {float: left; width: 40%;}
 .nav > div:last-child {width: 20%;}
-.nav > div ol {overflow: hidden; }
-.nav > div li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; }
-.nav > div:last-child li {width: 100%;}
-.nav > div li::before {content: ''; width: 3px; height: 3px; border-radius: 50%; background-color: #25a2d0; position: absolute; top:6px; left: 0;}
-.nav > div li a {position: relative;}
-.nav > div li a::after {content: ''; display: inline-block; width: 0; height: 1px; background-color: #25a2d0; position: absolute; bottom: 0; left: 0; transition: all .2s ease-out;}
-.nav > div li:hover a::after {width: 100%;}
+
+.nav > div ol li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; }
+.nav > div:last-child ol li {width: 100%;}
+
+/* 머릿말기호 */
+.nav > div ol li::before {content: ''; width: 3px; height: 3px; border-radius: 50%; background-color: #25a2d0; position: absolute; top:6px; left: 0;}
+
+/* 호버 시 메뉴 li a 효과 */
+.nav > div ol li a {position: relative;}
+.nav > div ol li a::after {content: ''; display: inline-block; width: 0; height: 1px; background-color: #25a2d0; position: absolute; bottom: 0; left: 0; transition: all .2s ease-out;}
+
+.nav > div ol li:hover a::after {width: 100%;}
 .nav > div h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
 
-/* 서브타이틀 */
+
+/* ------------------ 3. #title 서브타이틀 ---------------------- */
+
 .title {text-align: center; position: relative;}
 .title h2 {color: #0093bd; font-family: 'Nanum Brush Script', cursive; font-size: 39px; padding: 5px 0;}
 .title .btn {
@@ -98,7 +116,10 @@ border-right: 5px solid transparent;
     , 0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
-/* 컨텐츠 영역 */
+/* ------------------ 4. #main 컨텐츠 ---------------------- */
+
+/* column_common */
+
 .column {padding: 15px; border-bottom:1px solid #dbdbdb; }
 .column .col_tit {font-size: 20px; color:#2f7fa6; padding-bottom: 5px;}
 .column .col_desc {
@@ -107,8 +128,6 @@ border-right: 5px solid transparent;
     border-bottom: 1px dashed #dbdbdb;
     line-height: 18px;
 }
-
-/* col공통css */
 .column.col3 {border-bottom: 0;}
 .column.col6 {border-bottom: 0;}
 .column.col9 {border-bottom: 0;}
@@ -452,9 +471,8 @@ font-size: 60px;
 .side3:hover figcaption {
     transform: translate(-50%, -50%) rotate(0deg); opacity: 1;}
 
+/* ------------------ 5. #footer ---------------------- */
 
-
-/* footer */
 .footer {text-align: center; padding: 30px 50px;}
 .footer li {position: relative; display: inline-block; padding: 0 7px 0 10px; white-space: nowrap;}
 .footer li:first-child::before {width: 0;;}
@@ -468,10 +486,7 @@ font-size: 60px;
 .footer address {padding: 15px;}
 
 
-
-
-
-/* media-query */
+/* ------------------  media-query 미디어쿼리 ---------------------- */
 
 /* 화면너비 0 ~ 1220px */
 @media (max-width:1220px){
