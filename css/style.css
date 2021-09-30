@@ -39,9 +39,8 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; z-index: -2;}
 .header_tit h1 {padding: 5px 30px; background-color: #51b0dc; display: inline-block; font-size: 30px; color: #fff;transition: box-shadow 0.45s ease-in-out;}
 .header_tit h1:hover{box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;}
 .header_tit a {position: relative; display: inline-block; font-size: 16px; color: #fff; padding: 10px 20px; margin-top: -5px; 
-    background: #4a9abf; z-index: 2; transition: box-shad
-    ow 0.45s ease-in-out;}
-.header_tit a:hover{box-shadow: 0 0 0 5px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
+    background: #4a9abf; z-index: 2; transition: box-shadow 0.45s ease-in-out;}
+.header_tit a:hover{box-shadow: 0 0 0 5px #4a9abf inset, 0 0 0 100px rgba(0,0,0,0.) inset;}
 
 /* div.header_아이콘 */
 .header_icon {text-align: center; margin-top: 40px; padding-bottom: 45px; } 

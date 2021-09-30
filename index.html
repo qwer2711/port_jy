@@ -21,19 +21,19 @@
                     -->
 
     <!-- Facebook meta tags -->
-    <meta property="og:type" content="article" />
+    <!-- <meta property="og:type" content="article" />
     <meta property="og:title" content="반응형 사이트 만들기(title)" />
     <meta property="og:url" content="http://richclub8.dothome.co.kr/responsive/html5/index.html" />
     <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
     <meta property="og:site_name" content="반응형 사이트 만들기(site_name)" />
-    <meta property="og:description" content="반응형 사이트 따라하기(description)" />
+    <meta property="og:description" content="반응형 사이트 따라하기(description)" /> -->
 
     <!-- twitter meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@webstoryboy" />
     <meta name="twitter:title" content="반응형 사이트 만들기(title)" />
     <meta name="twitter:description" content="반응형 사이트 만들기(description)." />
-    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" /> -->
 
 
 
@@ -98,7 +98,6 @@
                     </div>
                 </div>
         </div>
-
     </header>
     <!-- header -->
 
@@ -161,6 +160,7 @@
     </nav>
     <!-- nav -->
 
+    <!-- title -->
     <article id="title">
         <div class="container">
             <div class="title">
@@ -171,9 +171,9 @@
                 </a>
             </div>
         </div>
-
     </article>
-
+    <!-- //title -->
+    
     <main class="contents">
         <div class="container">
             <h2 class="ir_su">반응형 사이트 컨텐츠</h2>
@@ -416,23 +416,21 @@
 
     <footer id="footer">
         <div class="container">
-            <div class="row">
-                <div class="footer">
-                    <ul>
-                        <li><a href="#">사이트 도움말</a></li>
-                        <li><a href="#">사이트 이용약관</a></li>
-                        <li><a href="#">사이트 운영원칙</a></li>
-                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
-                        <li><a href="#">책임의 한계와 법적고지</a></li>
-                        <li><a href="#">게시중단요청서비스</a></li>
-                        <li><a href="#">고객센터</a></li>
-                    </ul>
-                    <address>
-                        Copyright ©
-                        <a href="http://webstoryboy.co.kr"><strong>webstoryboy</strong></a>
-                        All Rights Reserved.
-                    </address>
-                </div>
+            <div class="footer">
+                <ul>
+                    <li><a href="#">사이트 도움말</a></li>
+                    <li><a href="#">사이트 이용약관</a></li>
+                    <li><a href="#">사이트 운영원칙</a></li>
+                    <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                    <li><a href="#">책임의 한계와 법적고지</a></li>
+                    <li><a href="#">게시중단요청서비스</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <address>
+                    Copyright ©
+                    <a href="http://webstoryboy.co.kr"><strong>webstoryboy</strong></a>
+                    All Rights Reserved.
+                </address>
             </div>
         </div>
     </footer>
@@ -453,10 +451,10 @@
             $(".btn").toggleClass("open");
 
             if ($(".btn").hasClass("open")) {
-                //open클래스가 있을 때
+                //open클래스가 있을 때 아이콘변경
                 $(".btn").find("i").attr("class", "fa fa-angle-up");
             } else {
-                //open 클래스가 없을 때
+                //open 클래스가 없을 때 아이콘변경
                 $(".btn").find("i").attr("class", "fa fa-angle-down");
 
             }
@@ -466,16 +464,14 @@
             var wWidth = $(window).width();
             if (wWidth > 600) {
                 $(".nav").removeAttr("style");
-            }
 
-            if (wWidth < 1200) {
-                //open클래스가 있을 때
                 if ($(".btn").hasClass("open")) {
                     //open클래스가 있을 때
                     $(".btn").removeClass("open")
                     $(".btn").find("i").attr("class", "fa fa-angle-down");
                 }
             }
+
         });
 
         //라이트 박스
@@ -508,14 +504,14 @@
         //http://twitter.com/intent/tweet?text={페이지 제목}&url={페이지링크}
         //https://share.naver.com/web/shareView.nhn?url={페이지링크}&title={페이지 제목}
         //https://plus.google.com/share?url={페이지링크}&t={페이지 제목}
-        $(".facebook").click(function (e) {
-            e.preventDefault();
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
-        });
-        $(".twitter").click(function (e) {
-            e.preventDefault();
-            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' + encodeURIComponent(document.URL) + '%20-%20' + encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
-        });
+        // $(".facebook").click(function (e) {
+        //     e.preventDefault();
+        //     window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        // });
+        // $(".twitter").click(function (e) {
+        //     e.preventDefault();
+        //     window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' + encodeURIComponent(document.URL) + '%20-%20' + encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        // });
     </script>
 </body>
 
