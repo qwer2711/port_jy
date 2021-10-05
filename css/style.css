@@ -730,6 +730,7 @@ font-size: 60px;
 
 /* 화면너비 0 ~ 480px */
 @media (max-width:480px){
+    .info .info_right {width: 100%; }
     
 }
 
@@ -744,7 +745,7 @@ font-size: 60px;
         width: 100%;
     }
     .info_right .category {
-        font-size: 13px;
+        font-size: 12px;
         
     }
 
