@@ -25,7 +25,7 @@
 
 
 /* top_menu */
-.top_menu{text-align: left; padding: 0 40px; border-bottom: 1px solid #dbdbdb;}
+.top_menu{display: none;  text-align: left; padding: 0 40px; border-bottom: 1px solid #dbdbdb;}
 .top_menu a{color: #999; font-size: 20px; font-weight: bold; padding: 8px 0 6px 10px; display: inline-block; transition: color 0.3s ease;}
 .top_menu a:hover {color: #ccc;}
 
@@ -39,7 +39,7 @@
 
 /* 1. info_left */
 
-.info_left {text-align: center;}
+.info_left {width: auto; text-align: center;}
 
 /* profile img */
 .info_left .info_img {
@@ -117,6 +117,7 @@
 
 /* 2. info_right */
 .info_right {
+    width: auto;
     margin-left: 80px;
     font-size: 13px;
     color: #999;
@@ -610,6 +611,9 @@ font-size: 60px;
 
     .square a {width: 24%;}
     .square a:nth-child(5n) {display: none;}
+
+
+    /* ------------------ */
 }
 
 /* 화면너비 0 ~ 1024px */
@@ -669,6 +673,33 @@ font-size: 60px;
 
 /* 화면너비 0 ~ 600px */
 @media (max-width:600px){
+    .info {flex-wrap: wrap;}
+    .info .info_left {width: 100%; margin-bottom: 35px;}
+    .info .info_right {width: 50%; margin:0 auto; text-align: center;}
+    
+    .info_right .category {display: block;}
+
+    .info_right > .info_cont_0 {flex-wrap: wrap;}
+    .info_right > .info_cont_0 .age {width: 100%;}
+    .info_right > .info_cont_0 .category {width: 100%;}
+
+    .info_right .status {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+
+    .info_right .category {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .info_right .status:after {display: none;}
+    .info_right .category::before {display: none;}
+
+
+    /* ----------------------- */
     .header{height: auto;}
     .header_tit {display: none;}
     .header_icon {display: none;}
@@ -705,10 +736,25 @@ font-size: 60px;
 /* 화면너비 0 ~ 320px */
 @media (max-width:320px){
 
+    .info_right .status {
+        font-size: 16px;
+    }
+
+    .info .info_right {
+        width: 100%;
+    }
+    .info_right .category {
+        font-size: 13px;
+        
+    }
+
+    /* --------------------- */
+
     .square a {width: 100%; margin-right: 0; margin-left: 0;}
 
     #cont_right .column {width: 100%;}
     #cont_right .column.col7 {border-right: 0; border-bottom: 1px solid #dbdbdb;} 
+    
     
 }
 
