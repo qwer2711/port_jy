@@ -1,5 +1,4 @@
 /* #레이아웃 */
-#nav { background-color: #f6fdff;}
 #title{background-color: #eaf7fd;}
 #contents .container{
     border-right: 1px solid #dbdbdb;
@@ -22,12 +21,17 @@
 
 /* 컨테이너 */
 .container {position:relative; width: 1200px; margin: 0 auto;}
+html.no-scroll {overflow-y: hidden;}
 
+
+/* ------------- 1. #nav ------------- */
 
 /* top_menu */
-.top_menu{display: none;  text-align: left; padding: 0 40px; border-bottom: 1px solid #dbdbdb;}
-.top_menu a{color: #999; font-size: 20px; font-weight: bold; padding: 8px 0 6px 10px; display: inline-block; transition: color 0.3s ease;}
-.top_menu a:hover {color: #ccc;}
+.top_nav{display: none;  text-align: left; padding: 0 40px; border-bottom: 1px solid #dbdbdb;}
+.top_nav a{color: #999; font-size: 14px; font-weight: bold; padding: 8px 0 6px 10px; display: inline-block; transition: color 0.3s ease;}
+.top_nav a:hover {color: #ccc;}
+
+/* ------------- 2. #profile ------------- */
 
 /* info */
 .info {
@@ -182,266 +186,74 @@
     background-color:#999;
 }
 
+/* ------------- 3. #header ------------- */
 
-/* ------------------ 2. #nav 전체메뉴 ---------------------- */
-
-.nav {padding: 25px 15px; display: none;}
-
-.nav > div {float: left; width: 40%;}
-.nav > div:last-child {width: 20%;}
-
-.nav > div ol li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; }
-.nav > div:last-child ol li {width: 100%;}
-
-/* 머릿말기호 */
-.nav > div ol li::before {content: ''; width: 3px; height: 3px; border-radius: 50%; background-color: #25a2d0; position: absolute; top:6px; left: 0;}
-
-/* 호버 시 메뉴 li a 효과 */
-.nav > div ol li a {position: relative;}
-.nav > div ol li a::after {content: ''; display: inline-block; width: 0; height: 1px; background-color: #25a2d0; position: absolute; bottom: 0; left: 0; transition: all .2s ease-out;}
-
-.nav > div ol li:hover a::after {width: 100%;}
-.nav > div h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
-
-
-/* ------------------ 3. #title 서브타이틀 ---------------------- */
-
-.title {text-align: center; position: relative;}
-.title h2 {color: #0093bd; font-family: 'Nanum Brush Script', cursive; font-size: 39px; padding: 5px 0;}
-.title .btn {
-    position:absolute; 
-    right: 0; 
-    top: 5px;
-    width: 60px; 
-    height: 60px; 
-    line-height: 60px; 
-    font-size: 35px; 
-    border-radius: 50%; 
-    transition: all 0.3s ease;
-    background-color: #3192df;
-    color: #fff;
-}
-
-.title .btn:hover{
-    box-shadow: 0 0 0 3px rgba(71,154,191,0.9) inset
-    , 0 0 0 100px rgba(0,0,0,0.1) inset;
-}
-
-/* ------------------ 4. #main 컨텐츠 ---------------------- */
-
-/* column_common */
-
-.column {padding: 15px; border-bottom:1px solid #dbdbdb; }
-.column .col_tit {font-size: 20px; color:#2f7fa6; padding-bottom: 5px;}
-.column .col_desc {
-    padding-bottom: 15px; 
-    margin-bottom: 15px; 
-    border-bottom: 1px dashed #dbdbdb;
-    line-height: 18px;
-}
-.column.col3 {border-bottom: 0;}
-.column.col6 {border-bottom: 0;}
-.column.col9 {border-bottom: 0;}
-
-/* col1_메뉴작업 */
-
-.menu ul li{position: relative;}
-
-.menu ul li a{font-size: 16px; 
-    text-transform: uppercase;
-    color: #878787;
+.tab_menu {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
-    padding: 10px;
-    display: block;
-    transition: box-shadow 0.34s ease, background-color 0.34s ease;
-}
-.menu ul li a:hover {
-    color:#fff;
-    box-shadow: inset 190px 0 0 0 rgba(36,130,174,0.7);
-    background-color: rgba(36,130,174,0.9);
-}
-.menu ul li a i{position:absolute; top:13px; right: 10px;}
-
-/* col2_게시판1 */
-.notice1 {position: relative;}
-.notice1 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 10px;}
-.notice1 li {text-indent: 12px; position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.notice1 li::before {
-    content: '';
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background-color: #449ce2;
-    position: absolute; left: 0; top: 6px;
 }
 
-
-/* col2_게시판2 */
-.notice2 {position: relative;}
-.notice2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
-.notice2 li {
+.tab_menu ul.top li {display: inline-block;}
+.tab_menu ul.top li a {
     position: relative;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    /* 몇줄로 할 지 지정할 수 있음 */
-    -webkit-line-clamp: 2;
-    padding-left: 12px;
-    max-height: 40px; /* ie 호환 위해서 넣음 */
+    display:block; 
+    padding: 20px;
+    font-size: 1.2em;
+    color: #999;
+    font-weight: bold;
 }
 
-.notice2 li::before {
-    content: ''; 
-    position: absolute; 
-    left: 0; top:5px; 
-    width: 3px; height: 3px; 
-    background:#2f7fa6;
+.tab_menu ul.top li.active a {
+    color: #ffa31b;
 }
 
-/* 게시판1,2 more */
-
-.notice .more {
-    position: absolute;
-    top:3px; right: 0;
-    color:#878787;
-    text-transform: uppercase; 
-    font-size: 10px;
+.tab_menu ul.top li.active a::after {
+    background: #ffa31b;
+    opacity: 1;
 }
 
-.notice .more i {
-    margin-left: 2px;
+.tab_menu ul.top li a:hover {
+    color: #ffa31b;
 }
 
-/* 블로그1_ 고화질이미지 figure*/
-
-.blog1 .img-retina {display: none;}
-.blog2 .img-retina {width: 100%;}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-        only screen and (min-device-pixel-ratio: 1.5),
-        only screen and (min-resolution: 1.5dppx) {
-        .blog1 .img-retina {display: initial;}
-        .blog1 .img-normal {display: none;}
-}
-
-/* 블로그2_ 고화질이미지 background */
-
-.blog2 h5 {color: #fff; text-align: center; padding: 30px 30px; 
-    text-transform: uppercase;
-}
-
-.blog2 .img-retina {
-    background: url(../img/blog4_@1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min-device-pixel-ratio: 2),
-        only screen and (min-resolution: 2dppx) {
-        .blog2 .img-retina {background: url(../img/blog4_@2.jpg); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-}
-
-/* x3 일 때 */
-@media only screen and (-webkit-min-device-pixel-ratio: 3),
-        only screen and (min-device-pixel-ratio: 3),
-        only screen and (min-resolution: 3dppx) {
-        .blog2 .img-retina {background: url(../img/blog4_@3.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-}
-
-/* col4 _ 이미지 슬라이드 Slider */
-.slider figure {position: relative;}
-.slider figcaption {
+.tab_menu ul.top li a::after {
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.5);
-    font-size: 18px;
-    color: #fff;
-}
-
-.slider figcaption em {
-    display: block;
-    font-weight: bold;
-    font-size: 28px;
-    text-transform: uppercase;
-    font-family: 'Abel', sans-serif;
-    /* 애니메이션 효과 */
+    width: 100%; height: 2px;
+    background: #ffa31b;
     opacity: 0;
-    transition: all .84s ease;
-    transform: translateX(50px);
+    transition: all 0.3s;
 }
 
-.slider figcaption span {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    /* 애니메이션 효과 */
-    opacity: 0;
-    transition: all .84s ease;
-    transform: translateX(50px);
+.tab_menu ul.top li a:hover::after {
+    opacity: 1;
 }
 
-/* 애니메이션 효과 */
-.slider .slick-active figcaption em {opacity: 1; transform: translateX(0);}
-.slider .slick-active figcaption span {opacity: 1; transform: translateX(0);}
+.tab_menu .tab_box > div {display: none;}
+.tab_menu .tab_box > div.active {display: block;}
 
-.slider .slick-dots {display: block; width: 100%; text-align: center;}
-.slider .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 15px;}
-.slider .slick-dots li button{
-    font-size: 0;
-    line-height: 0;
-    display: block; width: 15px; height: 15px;
-    cursor: pointer;
-    background-color: #5dbfeb;
-    border-radius: 50%;
+/* tab_cont_2 works */
+.work_tab_list li {
+    display: inline-block; 
+    padding: 20px 5px;
 }
 
-.slider .slick-dots li.slick-active button {
-    background: #2b92c8;
+.work_tab_list li a {
+    display: block; 
+    padding: 5px 8px; 
+    border-radius: 3px; 
+    background: #e1e1e1;
 }
 
-.slider .slick-arrow {
-    position: absolute; 
-    cursor: pointer; display: 
-    inline-block; bottom: 5px; 
-    z-index: 1000; 
-    width: 30px; height: 30px;
-    text-indent: -9999px;
-    /* font 속성: font-style font-variant font-weight font-size/line-height font-family */
-    font: normal normal normal 14px/1 FontAwesome;
-}
-.slider .slick-prev {left: 0;}
-.slider .slick-next {right: 0;}
-
-.slider .slick-prev::before {
-    content:"\f053";
-    color: #5dbfeb;
-    text-indent: 0;
-    position: absolute; left: 9px; top: 8px;
-    /* font-family:FontAwesome; */
+.work_tab_list li.active a {
+    background: red;
 }
 
-.slider .slick-next::before { 
-    content:"\f054";
-    color: #5dbfeb;
-    text-indent: 0;
-    position: absolute; left: 11px; top: 8px;
-    /* font-family:FontAwesome; */
-}
+.work_tab_cont > div {display: none;}
+.work_tab_cont > div.active {display: block;}
 
 
 /* 플러그인 라이트박스 */
@@ -480,107 +292,25 @@
 .square a:nth-child(9):hover img {filter: sepia(120%);}
 .square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
 
-
-/* col7 사이드 이펙트1 */
-.side1 {position: relative; perspective: 1000px; display: block;}
-
-.side1 .front {
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    transition: all 0.5s ease-in-out;
-    backface-visibility: hidden;
+.lg-outer .lg-image {
+    max-height: none !important;
 }
 
-.side1:hover .front{
-    transform: rotateY(180deg);
+.lg-outer .lg-img-wrap {
+    overflow-y: scroll;
+    z-index: 1060;
 }
 
-.side1 .back {
-    position: absolute; top:0; left: 0;
-    width: 100%; height: 100%; z-index: -1;
-    transform-style: preserve-3d;
-    color: #fff;
-    background: #4038dc;
-    transform: rotateY(-180deg);
-    transition: all 0.5s ease-in-out;
-    backface-visibility: hidden;
+/* 스크롤바 숨기기 */
+.lg-outer .lg-img-wrap  {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
-
-.side1:hover .back{
-    transform: rotateY(0deg);
-    z-index: 1;
-}
-
-.side1 .back i {position: absolute; top: 50%; left: 50%; transform: translateX(-50%)translateY(-50%);
-font-size: 60px;
-}
-
-/* col8 사이드 이펙트2 */
-.side2 {position: relative; display: block; perspective:  600px;}
-.side2 .front {
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    transition: all 0.5s ease-in-out;
-    backface-visibility: hidden;
-}
-.side2 .back {
-    position: absolute; top:0; left: 0; z-index: -1;
-    transform-style: preserve-3d;
-    transform: rotateY(-180deg);
-    transition: all 0.5s ease-in-out;
-    backface-visibility: hidden;
-}
-
-.side2:hover .front {transform: rotateY(180deg);}
-.side2:hover .back {transform: rotateY(0deg); z-index: 1;}
-
-.side2 figcaption {width: 60%;}
-.side2 figcaption {
-    color: #fff; 
-    font-size: 20px; font-family: 'Abel';
-    font-weight: bold;
-    background: rgba(0,0,0,0.4);
-    padding: 3px 10px;
-}
-
-.side2 .front figcaption {
-    position: absolute; top:50%; left: 50%;
-    transform: translate(-50%,-50%) translateZ(100px);
-    display: block;
-    text-align: center;
-}
-.side2 .back figcaption {
-    position: absolute; top:50%; left: 50%;
-    transform: translate(-50%,-50%) translateZ(100px);
-    display: block;
-    text-align: center;
+.lg-outer .lg-img-wrap::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 
-/* 사이드 이펙트3 */
-.side3 {position: relative; overflow: hidden; background: #fff;}
-.side3 figcaption {
-    position: absolute; left: 50%; top: 50%;
-    color: #fff; text-align: center;
-    opacity: 1;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    transform: translate(-50%, 380%) rotate(180deg);
-}
-.side3 figcaption:after {
-    content: '';
-    width: 100px; height: 100px;
-    background: #000; border-radius: 50%;
-    position: absolute; left: 50%; top: 50%; z-index: -1;
-    transform: translate(-50%, -50%);
-}
-.side3 figcaption h3 {font-size: 16px; color: #fff;}
-.side3 figcaption em {display: block; font-weight: bold;}
-.side3 img {display: block; transition: all 0.3s ease;}
-
-.side3:hover img {opacity: 0.4;}
-.side3:hover figcaption {
-    transform: translate(-50%, -50%) rotate(0deg); opacity: 1;}
 
 /* ------------------ 5. #footer ---------------------- */
 
@@ -602,72 +332,20 @@ font-size: 60px;
 /* 화면너비 0 ~ 1220px */
 @media (max-width:1220px){
     .container{width: 100%;}
-    .title .btn {right: 5px;}
-
-    #contents .container{
-        border-right: 0px solid #dbdbdb;
-        border-left: 0px solid #dbdbdb;
-    }
-
-    .square a {width: 24%;}
-    .square a:nth-child(5n) {display: none;}
-
-
-    /* ------------------ */
 }
 
 /* 화면너비 0 ~ 1024px */
 @media (max-width:1024px){
 
-    .square a {width: 32.333%;}
-    .square a:nth-child(5) {display: block;}
     
 }
 
 /* 화면너비 0 ~ 960px */
 @media (max-width:960px){
-    .nav > div {
-        float: none;
-        width: 100%;
-    }
-    .nav > div:last-child {width: 100%;}
-
-    .nav > div li {width: 33.333%;}
-    .nav > div:last-child li{width: 33.333%;}
-
-    .nav > div ol {margin-bottom: 10px;}
-    
-    #cont_center {
-        margin-right: 0px;
-        border-right: 0;
-    }
-
-    #cont_right {
-    position: static;
-    width: 100%;
-    border-top:1px solid #dbdbdb;
-
-    }
-
-    /* #cont_right {overflow: hidden;} clearfix 대신에 이걸 써도됨*/
-    /* #cont_right {overflow: hidden;} */
-    #cont_right .column {float: left; width: 33.333%; box-sizing: border-box;}
-    #cont_right .column.col7 {border-right: 1px solid #dbdbdb; border-bottom:0 ;} 
-    #cont_right .column.col8 {border-right: 1px solid #dbdbdb; border-bottom:0 ;} 
 }
 
 /* 화면너비 0 ~ 768px */
 @media (max-width:768px){
-
-    #cont_left {
-        float: none;  
-        width: 100%;
-        border-bottom: 1px solid #dbdbdb;
-    }
-
-    #cont_center {
-        min-height: auto;
-    }
     
 }
 
@@ -698,33 +376,6 @@ font-size: 60px;
     .info_right .status:after {display: none;}
     .info_right .category::before {display: none;}
 
-
-    /* ----------------------- */
-    .header{height: auto;}
-    .header_tit {display: none;}
-    .header_icon {display: none;}
-    .title .btn {display: none;}
-
-    .nav > div li {width: 50%;}
-    .nav > div:last-child li{width: 50%;}
-
-    .column.col1 {padding: 0; border-bottom: 0; }
-    .column.col1 .col_tit {display: none;}
-    .column.col1 .col_desc {display: none;}
-
-    .column.col1 .menu li{float: left; border-right:1px solid #dbdbdb; box-sizing: border-box; width:33.333%; text-align: center;}
-    .column.col1 .menu li:nth-child(3n) {border-right: 0;}
-    .column.col1 .menu li a{color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.7);}
-    .column.col1 .menu li a:hover{text-shadow: 0 0 5px rgba(0,0,0,0.7);}
-    .column.col1 .menu li a i {box-shadow: none; background: rgba(36,130,174,0.3);}
-    .column.col2 {background-color: #fff;}
-    
-    .square a {width: 49%;}
-    .square a:nth-child(5) {display: none;}
-
-    #cont_right .column {width: 50%;}
-    #cont_right .column.col8 {border-right: 0;} 
-    #cont_right .column.col9 {display: none;}
 }
 
 
@@ -741,21 +392,10 @@ font-size: 60px;
         font-size: 16px;
     }
 
-    .info .info_right {
-        width: 100%;
-    }
     .info_right .category {
         font-size: 12px;
-        
     }
 
-    /* --------------------- */
-
-    .square a {width: 100%; margin-right: 0; margin-left: 0;}
-
-    #cont_right .column {width: 100%;}
-    #cont_right .column.col7 {border-right: 0; border-bottom: 1px solid #dbdbdb;} 
-    
     
 }
 
