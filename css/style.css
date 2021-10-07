@@ -297,11 +297,9 @@ html.no-scroll {overflow-y: hidden;}
 }
 
 .lg-outer .lg-img-wrap {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll !important;
+    /* -webkit-overflow-scrolling: touch; */
     z-index: 1060;
-    -ms-overflow-style:inherit;
-    scrollbar-width:inherit;
 }
 
 /* 스크롤바 숨기기 */
@@ -385,6 +383,12 @@ html.no-scroll {overflow-y: hidden;}
 /* 화면너비 0 ~ 480px */
 @media (max-width:480px){
     .info .info_right {width: 100%; }
+
+    .lg-outer .lg-img-wrap {
+        overflow-y: auto !important;
+        /* -webkit-overflow-scrolling: touch; */
+        z-index: 1060;
+    }
     
 }
 
