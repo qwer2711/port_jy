@@ -22,7 +22,6 @@
 /* 컨테이너 */
 .container {position:relative; width: 1200px; margin: 0 auto;}
 html.no-scroll {overflow-y: hidden;}
-.overflow-scrolling--touch {-webkit-overflow-scrolling: touch;}
 
 
 /* ------------- 1. #nav ------------- */
@@ -299,6 +298,7 @@ html.no-scroll {overflow-y: hidden;}
 
 .lg-outer .lg-img-wrap {
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     z-index: 1060;
 }
 
