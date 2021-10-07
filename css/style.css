@@ -302,6 +302,10 @@ html.no-scroll {overflow-y: hidden;}
     z-index: 1060;
 }
 
+.lg-outer .lg-img-wrap img {
+    -webkit-overflow-scrolling: touch;
+}
+
 /* 스크롤바 숨기기 */
 .lg-outer .lg-img-wrap  {
     -ms-overflow-style: none; /* IE and Edge */
