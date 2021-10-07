@@ -300,6 +300,8 @@ html.no-scroll {overflow-y: hidden;}
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     z-index: 1060;
+    -ms-overflow-style:inherit;
+    scrollbar-width:inherit;
 }
 
 /* 스크롤바 숨기기 */
