@@ -292,29 +292,6 @@ html.no-scroll {overflow-y: hidden;}
 .square a:nth-child(9):hover img {filter: sepia(120%);}
 .square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
 
-.lg-outer .lg-image {
-    max-height: none !important;
-}
-
-.lg-outer .lg-img-wrap {
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch;
-    z-index: 1060;
-}
-
-.lg-outer .lg-img-wrap img {
-    -webkit-overflow-scrolling: touch;
-}
-
-/* 스크롤바 숨기기 */
-.lg-outer .lg-img-wrap  {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-.lg-outer .lg-img-wrap::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
-}
-
 #lg-download {display:none;}
 
 
