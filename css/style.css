@@ -36,14 +36,14 @@ html.no-scroll {overflow-y: hidden;}
 /* info */
 .info {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 5.5em 0;
 }
 
 /* 1. info_left */
 
-.info_left {width: auto; text-align: center;}
+.info_left {width: 30%; text-align: center;}
 
 /* profile img */
 .info_left .info_img {
@@ -121,8 +121,7 @@ html.no-scroll {overflow-y: hidden;}
 
 /* 2. info_right */
 .info_right {
-    width: auto;
-    margin-left: 80px;
+    width: 45%;
     font-size: 13px;
     color: #999;
     font-weight: bold;
@@ -186,43 +185,47 @@ html.no-scroll {overflow-y: hidden;}
     background-color:#999;
 }
 
-/* ------------- 3. #header ------------- */
-
-.tab_menu {
-    width: 100%;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
+.info_right_1 {width: 25%;}
+.info_right_1 ul li {display: inline-block;}
+.info_right_1 ul li a{
+    padding: 10px;
+    display: block;
 }
 
-.tab_menu ul.top li {display: inline-block;}
+/* ------------- 3. #header ------------- */
+
+.tab_menu {width: 100%;}
+.tab_menu .menu_box {border-top:1px solid #f5f6f8; border-bottom:1px solid #f5f6f8;}
+
+.tab_menu ul.top {max-width: 1200px; margin: 0 auto;}
+.tab_menu ul.top li {display: inline-block; text-align: center;}
 .tab_menu ul.top li a {
     position: relative;
     display:block; 
     padding: 20px;
     font-size: 1.2em;
-    color: #999;
     font-weight: bold;
+    transition: all .55s ease;
 }
 
 .tab_menu ul.top li.active a {
     color: #ffa31b;
 }
 
+
 .tab_menu ul.top li.active a::after {
     background: #ffa31b;
     opacity: 1;
 }
 
-.tab_menu ul.top li a:hover {
-    color: #ffa31b;
-}
 
 .tab_menu ul.top li a::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%; height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; height: 2px;
     background: #ffa31b;
     opacity: 0;
     transition: all 0.3s;
@@ -236,20 +239,35 @@ html.no-scroll {overflow-y: hidden;}
 .tab_menu .tab_box > div.active {display: block;}
 
 /* tab_cont_2 works */
+
 .work_tab_list li {
-    display: inline-block; 
-    padding: 20px 5px;
+    display: inline-block;
+    text-align: center;
+    
 }
 
 .work_tab_list li a {
     display: block; 
-    padding: 5px 8px; 
+    width: 80px;
+    line-height: 2.5em;
     border-radius: 3px; 
-    background: #e1e1e1;
+    background: #f5f6f8;
+    margin: 0 3px;
+    color: #212428;
+    font-weight: bold;
+    transition: all .35s ease;
 }
 
+
 .work_tab_list li.active a {
-    background: red;
+    background: #ffa31b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.work_tab_list li:hover a {
+    box-shadow: inset -4em 0 0 0 #ffa31b , inset 4em 0 0 0 #ffa31b;
+    color: #fff;
 }
 
 .work_tab_cont > div {display: none;}
@@ -262,13 +280,21 @@ html.no-scroll {overflow-y: hidden;}
     position: relative;
     overflow: hidden;
     float: left;
-    width: 19%;
-    margin: 0.5%;
+    width: calc(98% / 3);
+    margin-right: 1%;
+    margin-bottom: 40px;
+    display: block;
+    border-radius: 7px;
+    box-sizing: border-box;
+    border:1px solid #e1e1e1;
 }
+
+.square a:nth-child(3n) {margin-right: 0;}
 
 .square a img {
     width: 100%;
     display: block;
+    border-radius: 6px;
 }
 
 .square a em {
@@ -277,22 +303,139 @@ html.no-scroll {overflow-y: hidden;}
     width: 100%; text-align: center;
     position: absolute; bottom: -360px; left: 0;
     opacity: 1; transition: all .3s ease;
+    border-radius: 0 0 7px 7px;
+    padding: 10px 0;
 }
 
 .square a:hover em {bottom: 0; background: rgba(0,0,0,0.57);}
 
-.square a:nth-child(1):hover img {filter: blur(2px);}
-.square a:nth-child(2):hover img {filter:brightness(20%);}
-.square a:nth-child(3):hover img {filter: contrast(10%);}
-.square a:nth-child(4):hover img {filter: grayscale(100%);}
-.square a:nth-child(5):hover img {filter: hue-rotate(120deg);}
-.square a:nth-child(6):hover img {filter: invert(100%);}
-.square a:nth-child(7):hover img {filter: opacity(10%);}
-.square a:nth-child(8):hover img {filter: saturate(10%);}
-.square a:nth-child(9):hover img {filter: sepia(120%);}
-.square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
+.square a:hover img {filter:brightness(85%);}
+
 
 #lg-download {display:none;}
+
+
+.list-box-1 {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.list-box-1 .cell {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(98% / 3);
+    margin-right: 1%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.list-box-1 .cell:nth-child(3n){margin-right: 0;}
+
+.list-box-1 .cell .url {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%)translateY(-50%);
+    display: none;
+}
+
+
+/* link 아이콘 */
+
+.list-box-1 .cell:hover .url {
+    display: block;
+}
+
+
+.list-box-1 .cell .url a i {
+    border-radius: 100%;
+    padding: 20px;
+    color: white;
+    background-color: #ffa31b;
+    font-size: 1.5em;
+    transform: rotate(-90deg);
+}
+
+.list-box-1 .cell .url:hover a i {
+    transform: rotate(0deg);
+}
+
+.list-box-1 .cell .prod-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 47px;
+    padding-left: 5px;
+}
+
+.list-box-1 .cell > .img-box {
+    overflow: hidden;
+    border-radius: 7px;
+    position: relative;
+}
+
+.list-box-1 .cell > .img-box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.list-box-1 .cell:hover > .img-box::after {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.list-box-1 .cell > .img-box img {
+    transition: all .85s ease;
+}
+
+.list-box-1 .cell:hover > .img-box > img {
+    transform: scale(1.1);
+}
+
+
+/* col7 사이드 이펙트1 */
+
+.effect_box {margin-bottom: 40px;}
+.effect_box .cell {overflow: hidden; border-radius: 7px; width: calc(97% /4); margin-right: 1%; margin-bottom: 40px;}
+.effect_box .cell:last-child {margin-right: 0;}
+.side1 {position: relative; width: 300px; perspective: 1000px; display: block;}
+
+.side1 .front {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.side1:hover .front{
+    transform: rotateY(180deg);
+}
+
+.side1 .back {
+    position: absolute; top:0; left: 0;
+    width: 100%; height: 100%; z-index: -1;
+    transform-style: preserve-3d;
+    color: #fff;
+    background: #4038dc;
+    transform: rotateY(-180deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.side1:hover .back{
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+.side1 .back i {position: absolute; top: 50%; left: 50%; transform: translateX(-50%)translateY(-50%);
+font-size: 60px;
+}
+
+
 
 
 /* ------------------ 5. #footer ---------------------- */
@@ -314,11 +457,26 @@ html.no-scroll {overflow-y: hidden;}
 
 /* 화면너비 0 ~ 1220px */
 @media (max-width:1220px){
-    .container{width: 100%;}
+    .container{width: 97%;}
 }
 
 /* 화면너비 0 ~ 1024px */
 @media (max-width:1024px){
+
+    .info {
+        justify-content: center; 
+        flex-wrap: wrap;
+        padding: 3.5em 0;
+    }
+
+    .info_left {width: 50%;}
+    .info_right {width: 50%;}
+    .info_right_1 {width: 100%;}
+    .info_right_1 ul {text-align: center; padding-top: 50px;}
+
+    .tab_menu ul.top {text-align: center;}
+    .work_tab_list {text-align: center;}
+    .list-box-1 .cell .prod-title {text-align: center;}
 
     
 }
@@ -329,6 +487,9 @@ html.no-scroll {overflow-y: hidden;}
 
 /* 화면너비 0 ~ 768px */
 @media (max-width:768px){
+
+    .list-box-1 .cell {width: calc(98% / 2);}
+    .square a {width: calc(98% / 2);}
     
 }
 
@@ -366,19 +527,17 @@ html.no-scroll {overflow-y: hidden;}
 @media (max-width:480px){
     .info .info_right {width: 100%; }
 
+    .list-box-1 .cell {width: 98%;}
+    .square a {width: 98%;}
+
     
 }
 
 /* 화면너비 0 ~ 320px */
 @media (max-width:320px){
 
-    .info_right .status {
-        font-size: 16px;
-    }
-
-    .info_right .category {
-        font-size: 12px;
-    }
+    .info_right .status {font-size: 16px;}
+    .info_right .category {font-size: 12px;}
 
     
 }

@@ -37,17 +37,16 @@ $(document).ready(function(){
         });
 
         // tab_menu 주메뉴 탭 
-        $('.tab_menu ul.top li').click(function () {
+        $('.menu_box ul.top li').click(function () {
             var $this = $(this);
-            var $current = $('.tab_menu ul.top li.active');
+            var $current = $('.menu_box ul.top li.active');
             $current.removeClass('active');
             $this.addClass('active');
     
             var index = $this.index();
             var $part = $this.closest('.tab_menu');
-            $part.find('> .tab_box > div.active').removeClass('active');
-            $part.find('> .tab_box > div').eq(index).addClass('active');
-
+            $part.find('.tab_box > div.active').removeClass('active');
+            $part.find('.tab_box > div').eq(index).addClass('active');
             $('.work_tab_list li:first-child').click();
 
         });
@@ -60,9 +59,10 @@ $(document).ready(function(){
         $this.addClass('active');
 
         var index = $this.index();
-        var $part = $this.closest('.tab_cont_2');
+        var $part = $this.closest('.tab_cont_1');
         $part.find('> .work_tab_cont > div.active').removeClass('active');
         $part.find('> .work_tab_cont > div').eq(index).addClass('active');
+
     });
 
         //이미지 슬라이더
