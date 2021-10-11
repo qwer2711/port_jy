@@ -471,6 +471,7 @@ font-size: 1.8em;
     perspective: 1000px; 
     display: block;
     box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
+    -webkit-box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
     border-radius: 9px;
 }
 
@@ -499,6 +500,7 @@ font-size: 1.8em;
     overflow: hidden;
     border-radius: 9px;
     padding: 25px 30px;
+    background-color: #fff;
 }
 
 .tab_cont_4 .contact:hover .back{
