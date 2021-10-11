@@ -470,10 +470,9 @@ font-size: 1.8em;
     width: 483px; height: 276px; 
     perspective: 1000px; 
     display: block;
-    box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
-    -webkit-box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
     border-radius: 9px;
 }
+
 
 .tab_cont_4 .contact .front {
     width: 100%; height: 100%;
@@ -491,7 +490,9 @@ font-size: 1.8em;
 
 .tab_cont_4 .contact .back {
     position: absolute; top:0; left: 0;
-    width: 100%; height: 100%; z-index: -1;
+    width: 90%; height: 80%; 
+    padding: 5%;
+    z-index: -1;
     transform-style: preserve-3d;
     color: #222;
     transform: rotateX(-180deg);
@@ -499,8 +500,9 @@ font-size: 1.8em;
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 9px;
-    padding: 25px 30px;
     background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
+    -webkit-box-shadow: 0 0 5px 1px rgba(83, 83, 83, 0.2);
 }
 
 .tab_cont_4 .contact:hover .back{
