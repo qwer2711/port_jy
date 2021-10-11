@@ -697,8 +697,26 @@ font-size: 1.8em;
     .effect_box .cell {width: calc(97% /1);}
 
     /* tab_cont_4 contact */
+
+    .tab_cont_4 .contact {width: 100%; padding-bottom: 58%;}
     .tab_cont_4 .contact .back .tit {
         margin-bottom: 0.8em;
+    }
+
+    .tab_cont_4 .contact .back p {
+        line-height: 1.6em;
+    }
+
+    .tab_cont_4 .contact .back .tit_2 .name {
+        font-size: 1.2em;
+    }
+
+    .tab_cont_4 .contact .back span {
+        font-size: 0.8em;
+    }
+
+    .tab_cont_4 .contact .back .sit {
+        margin-top: 0%;
     }
 
 }
@@ -713,7 +731,7 @@ font-size: 1.8em;
 
     /* tab_cont_4 contact */
     .tab_cont_4 .effect_box {margin: 30px 0 30px 0;}
-    .tab_cont_4 .contact {width: 100%; padding-bottom: 58%;}
+    
 
     .tab_cont_4 .contact:hover .front{
         transform: rotateX(180deg);
@@ -737,16 +755,14 @@ font-size: 1.8em;
         line-height: 1.5em;
     }
 
+    
+
     .tab_cont_4 .contact .back .line {
         margin-top: 6%;
     }
 
     .tab_cont_4 .contact .back .tel {
         margin-top: 8%;
-    }
-
-    .tab_cont_4 .contact .back .sit {
-        margin-top: 0%;
     }
 
     
