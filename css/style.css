@@ -396,6 +396,7 @@ html.no-scroll {overflow-y: hidden;}
 
 .list-box-1 .cell:hover > .img-box > img {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 
