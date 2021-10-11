@@ -727,6 +727,24 @@ font-size: 1.8em;
         display: block;
     }
 
+    .tab_cont_4 .contact .back .tit {
+        font-size: 1.3em;
+        margin-bottom: 1.4em;
+    }
+
+    .tab_cont_4 .contact .back p {
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+
+    .tab_cont_4 .contact .back .line {
+        margin-top: 6%;
+    }
+
+    .tab_cont_4 .contact .back .tel {
+        margin-top: 8%;
+    }
+
     
 }
 
@@ -739,7 +757,7 @@ font-size: 1.8em;
     /* tab_cont_4 contact */
     .tab_cont_4 .contact {width: 100%; padding-bottom: 60%;}
     .tab_cont_4 .contact .back .tit {
-        font-size: 1.4em;
+        font-size: 1em;
         margin-bottom: 0.6em;
     }
 
