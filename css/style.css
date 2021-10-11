@@ -718,6 +718,21 @@ font-size: 1.8em;
     height: 0px;
 }
 
+.tab_cont_4 .contact:hover .front{
+    transform: rotateX(180deg);
+    display: none;
+}
+
+.tab_cont_4 .contact .back{
+    transform: rotateX(0deg);
+    display: none;
+}
+
+.tab_cont_4 .contact:hover .back{
+    display: block;
+}
+
+
     
 }
 
