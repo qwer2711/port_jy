@@ -402,37 +402,37 @@ html.no-scroll {overflow-y: hidden;}
 .effect_box {margin-bottom: 40px;}
 .effect_box .cell {overflow: hidden; border-radius: 7px; width: calc(97% /4); margin-right: 1%; margin-bottom: 40px;}
 .effect_box .cell:last-child {margin-right: 0;}
-.side1 {position: relative; width: 300px; perspective: 1000px; display: block;}
+.study {position: relative; width: 300px; perspective: 1000px; display: block;}
 
-.side1 .front {
+.study .front {
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     transition: all 0.5s ease-in-out;
     backface-visibility: hidden;
 }
 
-.side1:hover .front{
+.study:hover .front{
     transform: rotateY(180deg);
 }
 
-.side1 .back {
+.study .back {
     position: absolute; top:0; left: 0;
     width: 100%; height: 100%; z-index: -1;
     transform-style: preserve-3d;
     color: #fff;
-    background: #4038dc;
+    background: #ea5220;
     transform: rotateY(-180deg);
     transition: all 0.5s ease-in-out;
     backface-visibility: hidden;
 }
 
-.side1:hover .back{
+.study:hover .back{
     transform: rotateY(0deg);
     z-index: 1;
 }
 
-.side1 .back i {position: absolute; top: 50%; left: 50%; transform: translateX(-50%)translateY(-50%);
-font-size: 60px;
+.study .back span {position: absolute; top: 50%; left: 50%; transform: translateX(-50%)translateY(-50%);
+font-size: 1.8em;
 }
 
 
