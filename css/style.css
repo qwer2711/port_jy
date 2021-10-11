@@ -528,7 +528,7 @@ font-size: 1.8em;
     text-transform: uppercase;
     font-weight: bold;
     color:#ffa31b;
-    margin-bottom: 20px;
+    margin-bottom: 1.2em;
 }
 
 .tab_cont_4 .contact .back .tit_2 .name{
@@ -548,15 +548,15 @@ font-size: 1.8em;
     width: 40px;
     height: 2px;
     background: #ffa31b;
-    margin-top: 15px;
+    margin-top: 5%;
 }
 
 .tab_cont_4 .contact .back .tel {
-    margin-top: 15px;
+    margin-top: 5%;
 }
 
 .tab_cont_4 .contact .back .sit {
-    margin-top: 10px;
+    margin-top: 2%;
 }
 
 
@@ -686,6 +686,9 @@ font-size: 1.8em;
     }
 
     /* tab_cont_3 study */
+
+    .study:hover .front{transform: rotateY(0deg);}
+    .study:hover .back{display: none;}
     .effect_box .cell {width: calc(97% /1);}
 
 }
@@ -701,7 +704,7 @@ font-size: 1.8em;
     /* tab_cont_4 contact */
     .tab_cont_4 .contact {
     width: 100%;
-    height: 10px;
+    height: 0px;
 }
 
     
