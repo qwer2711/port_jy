@@ -609,6 +609,10 @@ font-size: 1.8em;
         display: block;
     }
 
+    .list-box-1 .cell > .img-box::after{
+        background: rgba(255, 255, 255, 0.3);
+    }
+
     /* tab_cont_3 study */
     .effect_box .cell {margin-bottom: 20px; width: calc(97% /2);}
     
