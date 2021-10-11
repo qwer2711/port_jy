@@ -603,6 +603,12 @@ font-size: 1.8em;
     .work_tab_list {text-align: center;}
     .list-box-1 .cell .prod-title {text-align: center;}
 
+
+    /* tab_cont_2 works */
+    .list-box-1 .cell .url {
+        display: block;
+    }
+
     /* tab_cont_3 study */
     .effect_box .cell {margin-bottom: 20px; width: calc(97% /2);}
     
