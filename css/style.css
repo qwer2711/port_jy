@@ -712,6 +712,7 @@ font-size: 1.8em;
     .square a {width: 98%;}
 
     /* tab_cont_4 contact */
+    .tab_cont_4 .effect_box {margin: 30px 0 30px 0;}
     .tab_cont_4 .contact {width: 100%; padding-bottom: 58%;}
 
     .tab_cont_4 .contact:hover .front{
@@ -736,9 +737,6 @@ font-size: 1.8em;
     .info_right .category {font-size: 12px;}
 
     /* tab_cont_4 contact */
-    .tab_cont_4 .effect_box {
-        margin: 40px 0 40px 0;
-    }
     .tab_cont_4 .contact {width: 100%; padding-bottom: 60%;}
     .tab_cont_4 .contact .back .tit {
         font-size: 1.4em;
