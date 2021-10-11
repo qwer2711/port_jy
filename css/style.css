@@ -520,6 +520,35 @@ font-size: 1.8em;
     .info_right .status:after {display: none;}
     .info_right .category::before {display: none;}
 
+
+    
+/* tab_cont_2 works */
+
+.work_tab_list li {
+    float: left;
+    width: 24%;
+    text-align: center;
+    margin-right: 1%;
+    
+}
+
+.work_tab_list li:last-child {
+    margin-right: 0%;
+
+}
+
+.work_tab_list li a {
+    display: block; 
+    width: 100%;
+    line-height: 2.5em;
+    border-radius: 3px; 
+    background: #f5f6f8;
+    margin: 0 0px;
+    color: #212428;
+    font-weight: bold;
+    transition: all .35s ease;
+}
+
 }
 
 
