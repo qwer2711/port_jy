@@ -192,6 +192,8 @@ html.no-scroll {overflow-y: hidden;}
     display: block;
 }
 
+.info_right_1 ul li a img svg{color: #ea5220;}
+
 /* ------------- 3. #header ------------- */
 
 .tab_menu {width: 100%;}
@@ -549,6 +551,9 @@ font-size: 1.8em;
     transition: all .35s ease;
 }
 
+/* tab_cont_3 study */
+.effect_box .cell {width: calc(97% /2);}
+
 }
 
 
@@ -558,6 +563,9 @@ font-size: 1.8em;
 
     .list-box-1 .cell {width: 98%;}
     .square a {width: 98%;}
+
+    /* tab_cont_3 study */
+    .effect_box .cell {width: calc(97% /1);}
 
     
 }
