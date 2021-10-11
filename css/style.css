@@ -469,7 +469,7 @@ font-size: 1.8em;
     position: relative; left: 50%; transform: translateX(-50%);
     width: 40%; height: 0;
 	overflow: hidden;
-	padding-bottom: 56.26%;
+	padding-bottom: 278px;
     perspective: 1000px; 
     display: block;
 }
@@ -499,7 +499,7 @@ font-size: 1.8em;
 .tab_cont_4 .contact .back {
     position: absolute; top: 0; left: 0;
 	width: 100%;
-	height: 38%;
+	height: 100%;
     z-index: -1;
     transform-style: preserve-3d;
     color: #222;
@@ -509,6 +509,13 @@ font-size: 1.8em;
     overflow: hidden;
     background-color: #fafafa;
     border-radius: 9px;
+}
+
+.tab_cont_4 .contact .back .back_box {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 5%;
 }
 
 .tab_cont_4 .contact:hover .back{
@@ -521,8 +528,7 @@ font-size: 1.8em;
     text-transform: uppercase;
     font-weight: bold;
     color:#ffa31b;
-    margin-left: -10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .tab_cont_4 .contact .back .tit_2 .name{
@@ -533,7 +539,6 @@ font-size: 1.8em;
 .tab_cont_4 .contact .back p {
     font-size: 1.1em;
     line-height: 2em;
-    padding-left: 1em;
 }
 .tab_cont_4 .contact .back span {
     font-size: 1em;
@@ -543,7 +548,6 @@ font-size: 1.8em;
     width: 40px;
     height: 2px;
     background: #ffa31b;
-    margin-left: 1em;
     margin-top: 15px;
 }
 
@@ -598,11 +602,18 @@ font-size: 1.8em;
     .work_tab_list {text-align: center;}
     .list-box-1 .cell .prod-title {text-align: center;}
 
+    /* tab_cont_3 study */
+    .effect_box .cell {margin-bottom: 20px; width: calc(97% /2);}
     
 }
 
 /* 화면너비 0 ~ 960px */
 @media (max-width:960px){
+
+    .effect_box .cell {
+        width: calc(97% /2);
+        margin-bottom: 20px;
+    }
 }
 
 /* 화면너비 0 ~ 768px */
@@ -642,35 +653,40 @@ font-size: 1.8em;
 
 
     
-/* tab_cont_2 works */
+    /* tab_cont_2 works */
 
-.work_tab_list li {
-    float: left;
-    width: 24%;
-    text-align: center;
-    margin-right: 1%;
-    
-}
+    .work_tab_list li {
+        float: left;
+        width: 24%;
+        text-align: center;
+        margin-right: 1%;
+        
+    }
 
-.work_tab_list li:last-child {
-    margin-right: 0%;
+    .work_tab_list li:last-child {
+        margin-right: 0%;
 
-}
+    }
 
-.work_tab_list li a {
-    display: block; 
-    width: 100%;
-    line-height: 2.5em;
-    border-radius: 3px; 
-    background: #f5f6f8;
-    margin: 0 0px;
-    color: #212428;
-    font-weight: bold;
-    transition: all .35s ease;
-}
+    .work_tab_list li a {
+        display: block; 
+        width: 100%;
+        line-height: 2.5em;
+        border-radius: 3px; 
+        background: #f5f6f8;
+        margin: 0 0px;
+        color: #212428;
+        font-weight: bold;
+        transition: all .35s ease;
+    }
 
-/* tab_cont_3 study */
-.effect_box .cell {width: calc(97% /2);}
+    /* tab_cont_4 contact */
+    .tab_cont_4 .contact {
+        width: 80%;
+    }
+
+    /* tab_cont_3 study */
+    .effect_box .cell {width: calc(97% /1);}
 
 }
 
@@ -682,8 +698,11 @@ font-size: 1.8em;
     .list-box-1 .cell {width: 98%;}
     .square a {width: 98%;}
 
-    /* tab_cont_3 study */
-    .effect_box .cell {width: calc(97% /1);}
+    /* tab_cont_4 contact */
+    .tab_cont_4 .contact {
+    width: 100%;
+    height: 10px;
+}
 
     
 }
