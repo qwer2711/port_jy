@@ -198,11 +198,11 @@ html.no-scroll {overflow-y: hidden;}
 .tab_menu .menu_box {border-top:1px solid #f5f6f8; border-bottom:1px solid #f5f6f8;}
 
 .tab_menu ul.top {max-width: 1200px; margin: 0 auto;}
-.tab_menu ul.top li {display: inline-block; text-align: center;}
+.tab_menu ul.top li {width: 25%; text-align: center;}
 .tab_menu ul.top li a {
     position: relative;
     display:block; 
-    padding: 20px;
+    padding: 20px 0;
     font-size: 1.2em;
     font-weight: bold;
     transition: all .55s ease;
