@@ -728,8 +728,8 @@ font-size: 1.8em;
     }
 
     .tab_cont_4 .contact .back .tit {
-        font-size: 1.3em;
-        margin-bottom: 1.4em;
+        font-size: 1.6em;
+        margin-bottom: 2em;
     }
 
     .tab_cont_4 .contact .back p {
@@ -745,6 +745,10 @@ font-size: 1.8em;
         margin-top: 8%;
     }
 
+    .tab_cont_4 .contact .back .sit {
+        margin-top: 0%;
+    }
+
     
 }
 
@@ -756,9 +760,10 @@ font-size: 1.8em;
 
     /* tab_cont_4 contact */
     .tab_cont_4 .contact {width: 100%; padding-bottom: 60%;}
+
     .tab_cont_4 .contact .back .tit {
-        font-size: 1em;
-        margin-bottom: 0.6em;
+        font-size: 1.3em;
+        margin-bottom: 1.5em;
     }
 
     .tab_cont_4 .contact .back p {
