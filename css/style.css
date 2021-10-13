@@ -24,6 +24,39 @@
 html.no-scroll {overflow-y: hidden;}
 
 
+/* ------------- 로딩페이지 ------------- */
+
+.loading{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    background:#fff;
+    z-index:1000;
+}
+
+.loading p {
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translatex(-50%)translatey(-55%);
+    font-size:1.8em;
+    font-weight:bold;
+    text-align:center;
+    color:#ffa31b;
+    opacity:0.5;
+}
+
+.loading svg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translatex(-50%)translatey(-50%);
+}
+
+
+
 /* ------------- 1. #nav ------------- */
 
 /* top_menu */
