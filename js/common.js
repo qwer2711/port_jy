@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+        //탑 배너 close
+        $('.top_banner .close').click(function(){
+            $('.top_banner').css('display','none');
+        });
     
         // 메뉴 접고 펼침
         $(".btn").click(function (e) {

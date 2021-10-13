@@ -23,6 +23,89 @@
 .container {position:relative; width: 1200px; margin: 0 auto;}
 html.no-scroll {overflow-y: hidden;}
 
+.top_banner{
+    position: relative;
+    width: 100%;
+    height: 4.5em;
+    line-height: 4.5em;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(223, 223, 223, 0.348);
+}
+
+.top_banner .close {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 3%;
+    display: block;
+    width: 5%;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 1.2em;
+    color: #ea5220;
+    cursor: pointer;
+}
+
+
+.top_banner .state {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.top_banner .state::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top:50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffa31b;
+    transform: translateY(-50%);
+}
+
+.top_banner .circle {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    opacity: 0.5;
+}
+
+.top_banner .c1 {
+    top:20%;
+    left: 30%;
+    background: #fff;
+}
+
+.top_banner .c2 {
+    top:-200%;
+    left: 10%;
+    
+
+}
+
+.top_banner .c3 {
+    top:-80%;
+    left: auto;
+    right: 30%;
+}
+
+.top_banner .c4 {
+    top:-200%;
+    left: auto;
+    right: 10%;
+    background: #fff;
+
+}
+
+
 
 /* ------------- 로딩페이지 ------------- */
 
@@ -599,7 +682,7 @@ font-size: 1.5em;
 
 /* ------------------ 5. #footer ---------------------- */
 
-.footer {text-align: center; padding: 30px 50px;}
+.footer {text-align: center; padding: 20px 50px;}
 .footer li {position: relative; display: inline-block; padding: 0 7px 0 10px; white-space: nowrap;}
 .footer li:first-child::before {width: 0;;}
 .footer li::before {
