@@ -105,8 +105,6 @@ html.no-scroll {overflow-y: hidden;}
 
 }
 
-
-
 /* ------------- 로딩페이지 ------------- */
 
 .loading{
@@ -763,6 +761,10 @@ font-size: 1.5em;
 
 /* 화면너비 0 ~ 600px */
 @media (max-width:600px){
+    .top_banner .circle {
+        display: none;
+    }
+
     .info {flex-wrap: wrap;}
     .info .info_left {width: 100%; margin-bottom: 35px;}
     .info .info_right {width: 50%; margin:0 auto; text-align: center;}
@@ -846,6 +848,11 @@ font-size: 1.5em;
 
 /* 화면너비 0 ~ 480px */
 @media (max-width:480px){
+
+    .loading p {
+        font-size:1.2em;
+    }
+
     .info_left .info_img {
         width: 150px;
         height: 150px;
