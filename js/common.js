@@ -6,7 +6,7 @@ $(document).ready(function(){
         });
     
         // 메뉴 접고 펼침
-        $(".btn").click(function (e) {
+        $(".btn").click(function(e) {
             e.preventDefault();
             $(".nav").slideToggle();
             $(".btn").toggleClass("open");
