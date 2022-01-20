@@ -518,7 +518,7 @@ html.no-scroll {overflow-y: hidden;}
 /* tab3_study 이펙트 */
 
 .effect_box {margin-bottom: 40px;}
-.effect_box .cell {overflow: hidden; border-radius: 7px; width: calc(97% /4); margin-right: 1%; margin-bottom: 40px;}
+.effect_box .cell {overflow: hidden; border-radius: 7px; width: calc(96% /5); margin-right: 1%; margin-bottom: 40px;}
 .effect_box .cell:last-child {margin-right: 0;}
 .study {position: relative; width: 300px; perspective: 1000px; display: block;}
 
@@ -550,7 +550,7 @@ html.no-scroll {overflow-y: hidden;}
 }
 
 .study .back span {position: absolute; top: 50%; left: 50%; transform: translateX(-50%)translateY(-50%);
-font-size: 1.5em;
+font-size: 1.3em;
 }
 
 /* tab4_contact 이펙트 */
