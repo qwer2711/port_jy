@@ -481,14 +481,38 @@ html.no-scroll {overflow-y: hidden;}
 .list-box-1 .cell .prod-title {
     font-size: 0.9rem;
     font-weight: bold;
-    line-height: 47px;
     padding-left: 5px;
+    padding: 10px 0 5px 0;
+}
+.list-box-1 .cell .prod-sub-title {
+    font-size: 0.8rem;
+    padding-bottom: 3px;
 }
 
 .list-box-1 .cell > .img-box {
     overflow: hidden;
     border-radius: 7px;
     position: relative;
+}
+.list-box-1 .cell.projt{
+    cursor: inherit;
+}
+.list-box-1 .cell.projt > .img-box {
+    overflow: hidden;
+    border-radius: 7px;
+    position: relative;
+    height: 200px;
+}
+.list-box-1 .cell.projt > .img-box img{
+    height: 100%;
+}
+
+.list-box-1 .cell.projt > .img-box img {
+    filter: blur(1px);
+}
+
+.list-box-1 .cell.projt:hover > .img-box::after{
+    background: rgba(255, 255, 255, 0);
 }
 
 .list-box-1 .cell > .img-box::after{
@@ -722,6 +746,7 @@ font-size: 1.3em;
     .tab_menu ul.top {text-align: center;}
     .work_tab_list {text-align: center;}
     .list-box-1 .cell .prod-title {text-align: center;}
+    .list-box-1 .cell .prod-sub-title {text-align: center;}
 
 
     /* tab_cont_2 works */
@@ -730,6 +755,8 @@ font-size: 1.3em;
     .list-box-1 .cell:hover > .img-box::after {
         background: rgba(255, 255, 255, 0.3);
     }
+
+    .list-box-1 .cell.projt > .img-box::after{background: rgba(255, 255, 255, 0);}
 
     /* tab_cont_3 study */
     .effect_box .cell {margin-bottom: 20px; width: calc(97% /2);}
